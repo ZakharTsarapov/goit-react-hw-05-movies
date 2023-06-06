@@ -8,6 +8,7 @@ const time_window = 'day';
 export const fetchAllMovies = async () => {
     const response = await axios.get(
       `${API_URL}trending/movie/${time_window}?api_key=${API_KEY}&page=1`
-    ); 
+    ); console.log(response.data);
     return response.data;
+    
 }

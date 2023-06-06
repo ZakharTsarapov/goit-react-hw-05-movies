@@ -1,29 +1,18 @@
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
+import Movies from 'views/Movies';
+import { Layout } from './Layout/Layout';
 // import { Layout } from '../components/Layout/Layout';
-const Home = lazy(() => import('pages/Home'))
+const Home = lazy(() => import('views/Home'))
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      <nav>
-        <NavLink to="/">That's ur home buddy</NavLink>
-        <NavLink to="/movies">Go find movie for evening dude</NavLink>
-      </nav>
       <Routes>
-        <Route path='/' element={<div>buddy</div>} />
-        <Route path='/movies' element={<div>doggy style</div>} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="movies" element={<Movies />} />
+          <Route path="movies/:movieId" element={<div>Карточка</div>} />
+        </Route>
       </Routes>
-      <Home   />
-    </div>
   );
 };

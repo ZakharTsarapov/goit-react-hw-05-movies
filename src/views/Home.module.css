@@ -1,0 +1,12 @@
+.name {
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

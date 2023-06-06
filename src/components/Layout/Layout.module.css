@@ -1,0 +1,11 @@
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+.nav {
+    text-decoration: none;
+    color: green;
+}

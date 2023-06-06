@@ -1,0 +1,13 @@
+.text {
+    font-size: 15px;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
