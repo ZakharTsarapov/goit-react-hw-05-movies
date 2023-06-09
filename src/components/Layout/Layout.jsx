@@ -8,7 +8,7 @@ export const Layout = () => {
         <ul className={css.list}>
           <li>
             <NavLink className={css.nav} to="/">
-              That's ur home buddy
+              That's ur Home buddy
             </NavLink>
           </li>
           <li>

@@ -6,9 +6,15 @@ const API_URL = 'https://api.themoviedb.org/3/';
 const time_window = 'day';
 
 export const fetchAllMovies = async () => {
-    const response = await axios.get(
-      `${API_URL}trending/movie/${time_window}?api_key=${API_KEY}&page=1`
-    ); console.log(response.data);
-    return response.data;
-    
-}
+  const { data } = await axios.get(
+    `${API_URL}trending/movie/${time_window}?api_key=${API_KEY}&page=1`
+  );
+  return data;
+};
+
+export const fetchMovieDetails = async movieId => {
+  const response = await axios.get(
+    `${API_URL}movie/${movieId}?api_key=${API_KEY}`
+  );
+  return response.data;
+};
