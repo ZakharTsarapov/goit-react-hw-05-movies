@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import css from './Layout.module.css'
 
 export const Layout = () => {
@@ -7,14 +7,14 @@ export const Layout = () => {
       <header>
         <ul className={css.list}>
           <li>
-            <NavLink className={css.nav} to="/">
+            <Link className={css.nav} to="/">
               That's ur Home buddy
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink className={css.nav} to="/movies">
+            <Link className={css.nav} to="/movies">
               Go find movie for evening dude
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </header>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import css from './SearchBar.module.css'
 
 
-export default function SearchBar({ onSubmit }) {
+function SearchBar({ onSubmit }) {
   const [searchQuery, setSearchQuery] = useState('');
 
   const formReset = () => {
@@ -37,6 +37,7 @@ export default function SearchBar({ onSubmit }) {
     </form>
   );
 }
+export default SearchBar;
 
 SearchBar.propTypes = {
   onSubmit: PropTypes.func,
