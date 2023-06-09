@@ -1,7 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
 import css from './MoviesItem.module.css'
 
-const MoviesItem = ({ movie: { title, poster_path, id } }) => {
+const MoviesItem = ({ movie }) => {
+  const {
+    title,
+    poster_path,
+    id,
+  } = movie;
   const location = useLocation();
 
   const pathName = location.pathname.includes('/movies') ? '' : 'movies/';

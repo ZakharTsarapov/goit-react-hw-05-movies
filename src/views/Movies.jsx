@@ -1,9 +1,11 @@
+import SearchBar from "components/SearchBar/SearchBar";
+
 const Movies = () => {
-return (
-  
-    <div>doggy style</div>
-  
-);
+    return (
+      <>
+        <SearchBar />
+      </>
+    );
 }
 
 
