@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef } from "react";
-import { useLocation, useParams, Link } from "react-router-dom";
+import { useEffect, useState, useRef, Suspense } from "react";
+import { useLocation, useParams, Link, Outlet } from "react-router-dom";
 import { fetchMovieDetails } from "services/api";
 import MovieCard from "components/MovieCard/MovieCard";
 import { Loader } from "components/Loader/Loader";
@@ -33,9 +33,12 @@ const MoviesDetail = () => {
     return (
       <>
         {loading && <Loader />}
-        {error && <h1>Something went wrong damn nigga...</h1>}
+        {error && <h1>Something went wrong man...</h1>}
         <Link className={css.link} to={backLinkLocationRef.current}>Back</Link>
-        <MovieCard movie={movieDetails} />
+            <MovieCard movie={movieDetails} />
+            <Suspense fallback={<Loader />}>
+                <Outlet />
+            </Suspense>
       </>
     );
 
