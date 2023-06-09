@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/388.d93d9b41.chunk.js","mappings":"0JASA,UATe,WACf,OAEI,yBAAK,eAGR,C","sources":["views/Movies.jsx"],"sourcesContent":["const Movies = () => {\nreturn (\n  \n    <div>doggy style</div>\n  \n);\n}\n\n\nexport default Movies"],"names":[],"sourceRoot":""}
