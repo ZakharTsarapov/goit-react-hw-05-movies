@@ -33,7 +33,7 @@ const Home = () => {
         <MoviesList movies={allMovies} />
       </ul>
       {loading && <Loader />}
-      {error && <h1>Something went wrong damn nigga...</h1>}
+      {error && <h1>Something went wrong man...</h1>}
     </>
   );
 };

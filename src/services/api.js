@@ -32,3 +32,10 @@ export const fetchReviews = async movieId => {
   );
   return response.data
 }
+
+export const fetchQuery = async query => {
+  const response = await axios.get(
+    `${API_URL}/search/movie?api_key=${API_KEY}&query=${query}&page=1&include_adult=false`
+  );
+  return response.data
+}
