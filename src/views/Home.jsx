@@ -24,7 +24,7 @@ const Home = () => {
     };
 
     getAllMovies();
-  }, [allMovies]);
+  }, []);
 
   return (
     <>

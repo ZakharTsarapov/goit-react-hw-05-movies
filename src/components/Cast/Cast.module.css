@@ -1,0 +1,14 @@
+.item {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 20px;
+    list-style: none;
+}
+
+.text {
+    text-align: center;
+    font-size: 15px;
+}

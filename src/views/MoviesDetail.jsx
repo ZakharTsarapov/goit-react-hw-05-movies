@@ -33,7 +33,7 @@ const MoviesDetail = () => {
     return (
       <>
         {loading && <Loader />}
-        {error && <h1>Something went wrong man...</h1>}
+        {error && <h2>Something went wrong man...</h2>}
         <Link className={css.link} to={backLinkLocationRef.current}>Back</Link>
             <MovieCard movie={movieDetails} />
             <Suspense fallback={<Loader />}>
